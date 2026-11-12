@@ -1,0 +1,1 @@
+Check what the pull request branch touches before merging and let me know if when merged, if it will have consequences in the main version which were unforseen or something i haven't brought up yet. List these consequences in short bullet point sentences.

@@ -69,6 +69,30 @@ function deleteTask(id) {
   render();
 }
 
+const THEME_KEY = "todo-theme";
+const themeToggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+  document.body.classList.toggle("dark", theme === "dark");
+  themeToggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+}
+
+themeToggle.addEventListener("click", () => {
+  const theme = document.body.classList.contains("dark") ? "light" : "dark";
+  applyTheme(theme);
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // Theme still works for this visit; it just won't be remembered
+  }
+});
+
+try {
+  applyTheme(localStorage.getItem(THEME_KEY) || "light");
+} catch {
+  applyTheme("light");
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = input.value.trim();

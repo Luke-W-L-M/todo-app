@@ -31,30 +31,69 @@ h1 {
   font-size: 0.875rem;
 }
 
-/* Dark mode */
+/* Dark mode: neon outlines with a soft glow */
 body.dark {
-  background: #121212;
-  color: #eee;
+  background: #0a0a12;
+  color: #f2f2ff;
 }
 
 body.dark .app {
-  background: #1e1e1e;
-  box-shadow: none;
+  background: #12121c;
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 12px #00f0ff, inset 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+body.dark h1 {
+  color: #ffd6f6;
+  text-shadow: 0 0 4px #ff2bd6, 0 0 12px #ff2bd6;
 }
 
 body.dark #task-input {
-  background: #2a2a2a;
-  color: #eee;
-  border-color: #444;
+  background: #0a0a12;
+  color: #f2f2ff;
+  border-color: #00f0ff;
+  box-shadow: 0 0 8px #00f0ff;
 }
 
-body.dark #task-list li {
-  border-bottom-color: #333;
+body.dark button {
+  background: transparent;
+  color: #ff2bd6;
+  border: 1px solid #ff2bd6;
+  box-shadow: 0 0 8px #ff2bd6;
+  text-shadow: 0 0 6px #ff2bd6;
 }
 
 body.dark #theme-toggle {
-  background: #ddd;
-  color: #222;
+  background: transparent;
+  color: #b26bff;
+  border-color: #b26bff;
+  box-shadow: 0 0 8px #b26bff;
+  text-shadow: 0 0 6px #b26bff;
+}
+
+body.dark .delete-btn {
+  color: #ff3b5c;
+  border-color: #ff3b5c;
+  box-shadow: 0 0 8px #ff3b5c;
+  text-shadow: 0 0 6px #ff3b5c;
+}
+
+body.dark #task-list li {
+  border-bottom-color: rgba(178, 107, 255, 0.4);
+}
+
+body.dark #task-list li span {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+body.dark #task-list li.done span {
+  color: #777;
+  text-shadow: none;
+}
+
+body.dark #task-list input[type="checkbox"] {
+  accent-color: #39ff14;
+  box-shadow: 0 0 8px #39ff14;
 }
 
 #task-form {
